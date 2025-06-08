@@ -64,4 +64,21 @@ public class ListLinked<E> implements Iterable<E> {
         }
         return sb.toString();
     }
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public E getFirst() {
+        return head.data;
+    }
+    public int size() {
+        int count = 0;
+        Node<E> current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
 }
